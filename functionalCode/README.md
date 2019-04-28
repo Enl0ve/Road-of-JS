@@ -17,9 +17,9 @@
       + 纯函数产生可测试的代码
       + 合理的代码
    + 并发代码
-   + [可缓存]()
-   + [管道与组合]()
-   + [纯函数是数学函数]()
+   + [可缓存](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/Functional%20Code%20Introduction/%E5%8F%AF%E7%BC%93%E5%AD%98.md)
+   + [管道与组合](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/Functional%20Code%20Introduction/%E7%AE%A1%E9%81%93%E4%B8%8E%E7%BB%84%E5%90%88(compose%26pipe).md)
+   + [纯函数是数学函数](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/Functional%20Code%20Introduction/%E7%BA%AF%E5%87%BD%E6%95%B0%E6%98%AF%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0.md)
    + [小结]()
 + JavaScript函数基础
    + ECMAScript历史
@@ -41,16 +41,16 @@
    + 小结
 + 高阶函数
    + 理解数据
-     + [理解JavaScript数据类型]()
+     + [理解JavaScript数据类型](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/High%20Order%20Function/Understand%20Bisic%20Type%20of%20Data.md)
      + 存储函数
      + 传递函数
      + 返回函数
    + 抽象和高阶函数
      + 抽象的定义
-     + [通过高阶函数进行抽象]()
+     + [通过高阶函数进行抽象](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/High%20Order%20Function/abstract%20by%20HOC.md)
    + 真正的高阶函数
-     + every函数
-     + some函数
+     + [every函数]()
+     + [some函数]()
      + sort函数
    + 小结
  + 闭包与高阶函数
