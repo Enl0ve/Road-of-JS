@@ -20,7 +20,7 @@
    + [可缓存](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/Functional%20Code%20Introduction/%E5%8F%AF%E7%BC%93%E5%AD%98.md)
    + [管道与组合](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/Functional%20Code%20Introduction/%E7%AE%A1%E9%81%93%E4%B8%8E%E7%BB%84%E5%90%88(compose%26pipe).md)
    + [纯函数是数学函数](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/Functional%20Code%20Introduction/%E7%BA%AF%E5%87%BD%E6%95%B0%E6%98%AF%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0.md)
-   + [小结]()
+   + [小结](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/Functional%20Code%20Introduction/Conclusion.md)
 + JavaScript函数基础
    + ECMAScript历史
    + 创建并执行函数
@@ -49,53 +49,53 @@
      + 抽象的定义
      + [通过高阶函数进行抽象](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/High%20Order%20Function/abstract%20by%20HOC.md)
    + 真正的高阶函数
-     + [every函数]()
-     + [some函数]()
+     + [every函数](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/High%20Order%20Function/function%20array.md)
+     + [some函数](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/High%20Order%20Function/function%20some.md)
      + sort函数
-   + 小结
+   + [小结](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/High%20Order%20Function/conclusion.md)
  + 闭包与高阶函数
    + 理解闭包
-     + [什么是闭包]()
-     + [记住闭包生成的位置]()
+     + [什么是闭包](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/%E9%97%AD%E5%8C%85%26HOC/%E4%BB%80%E4%B9%88%E6%98%AF%E9%97%AD%E5%8C%85.md)
+     + [记住闭包生成的位置](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/%E9%97%AD%E5%8C%85%26HOC/%E8%AE%B0%E4%BD%8F%E9%97%AD%E5%8C%85%E7%94%9F%E6%88%90%E7%9A%84%E4%BD%8D%E7%BD%AE.md)
      + 回顾sortBy函数
    + 真正的高阶函数
-     + [tap函数]()
-     + [unary函数]()
-     + [once函数]()
-     + [memorized函数]()
+     + [tap函数](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/%E9%97%AD%E5%8C%85%26HOC/function%20tap.md)
+     + [unary函数](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/%E9%97%AD%E5%8C%85%26HOC/function%20unary.md)
+     + [once函数](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/%E9%97%AD%E5%8C%85%26HOC/function%20once.md)
+     + [memorized函数](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/%E9%97%AD%E5%8C%85%26HOC/function%20memoized.md)
    + 小结
 + 数组的函数式编程
    + 数组的函数式方法
-     + map
-     + fliter
-   + [连接操作]()
-   + [reduce函数]()
-   + [zip数组]()
+     + map  
+     + [fliter](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/functional%20code%20of%20array/function%20filter.md)
+   + [连接操作](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/functional%20code%20of%20array/function%20concatAll.md)
+   + [reduce函数](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/functional%20code%20of%20array/function%20reduce.md)
+   + [zip数组](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/functional%20code%20of%20array/function%20zip.md)
    + 小结
 + 柯里化与偏应用
    + 一些术语
      + 一元函数
      + 二元函数
      + 变参函数
-   + 柯里化
-     + [柯里化用例]()
-     + [日志函数 - 应用柯里化]()
-     + [回顾curry]()
-     + 回顾日志函数
+   + [柯里化](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/Curry%26%E5%81%8F%E5%BA%94%E7%94%A8/Curry.md)
+     + [柯里化用例](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/Curry%26%E5%81%8F%E5%BA%94%E7%94%A8/examples%20about%20curry.md)
+     + [日志函数 - 应用柯里化](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/Curry%26%E5%81%8F%E5%BA%94%E7%94%A8/%E6%97%A5%E5%BF%97%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96.md)
+     + [回顾curry](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/Curry%26%E5%81%8F%E5%BA%94%E7%94%A8/%E5%9B%9E%E9%A1%BEcurry.md)
+     + [回顾日志函数](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/Curry%26%E5%81%8F%E5%BA%94%E7%94%A8/%E5%9B%9E%E9%A1%BE%E6%97%A5%E5%BF%97%E5%87%BD%E6%95%B0.md)
    + 柯里化实战
      + 在数组内容中查找数字
      + 求数组的平方
    + 数据流
-     + [偏应用]()
-     + [实现偏函数]()
+     + [偏应用](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/Curry%26%E5%81%8F%E5%BA%94%E7%94%A8/partial(%E5%81%8F%E5%BA%94%E7%94%A8).md)
+     + [实现偏函数](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/Curry%26%E5%81%8F%E5%BA%94%E7%94%A8/realize%20partial(%E5%AE%9E%E7%8E%B0%E5%81%8F%E5%87%BD%E6%95%B0).md)
      + 柯里化与偏应用
    + 小结
 + 组合与管道
    + 组合的概念
    + 函数式组合
      + 回顾map与fliter
-     + [compose函数]()
-   + [应用compose函数]()
+     + [compose函数](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/composition%26pipe/function%20compose.md)
+   + [应用compose函数](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/composition%26pipe/%E5%BA%94%E7%94%A8compose%E5%87%BD%E6%95%B0.md)
      + 引入curry和partial
      + 组合多个函数
    + 管道/序列
@@ -104,15 +104,15 @@
      + 使用tap函数调式
    + 小结
  + 函子
-   + [什么是函子]()
-     + [函子是容器]()
+   + [什么是函子](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/%E5%87%BD%E5%AD%90/%E4%BB%80%E4%B9%88%E6%98%AF%E5%87%BD%E5%AD%90.md)
+     + [函子是容器](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/%E5%87%BD%E5%AD%90/%E5%87%BD%E5%AD%90%E6%98%AF%E5%AE%B9%E5%99%A8.md)
      + 函子实现了map方法
    + MayBe函子
-     + [实现MayBe函子]()
-     + [简单用例]()
-     + 真是用例
-   + [Either函子]()
-     + [实现Either函子]()
+     + [实现MayBe函子](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/%E5%87%BD%E5%AD%90/%E5%AE%9E%E7%8E%B0MayBe%E5%87%BD%E5%AD%90.md)
+     + [简单用例](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/%E5%87%BD%E5%AD%90/%E7%AE%80%E5%8D%95%E7%94%A8%E4%BE%8B.md)
+     + 真实用例
+   + [Either函子](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/%E5%87%BD%E5%AD%90/Either%E5%87%BD%E5%AD%90.md)
+     + [实现Either函子](https://github.com/Enl0ve/Road-of-JS/blob/master/functionalCode/docs/%E5%87%BD%E5%AD%90/%E5%AE%9E%E7%8E%B0Either%E5%87%BD%E5%AD%90.md)
      + reddit例子的Either版本
    + Pointed函子
    + 小结
