@@ -274,5 +274,59 @@ class Cat extends Animal{
     // → 'today'
     rtf.format(1, 'day');
     // → 'tomorrow'
+
+
+    /**
+    * Intl.DateTimeFormat#formatRange
+    * @description: provides a convenient way of formatting ranges in a locale-specific manner
+    **/
+    //below examples create two dates and print the data range using 'DateTimeFormat' API which is an existing API that has been shipping in
+    const start = new Date(startTimestamp);
+    // → 'May 7, 2019'
+    const end = new Date(endTimestamp);
+    // → 'May 9, 2019'
+    const fmt = new Intl.DateTimeFormat('en', {
+        year: 'numberic',
+        month: 'long',
+        day: 'numberic'
+    })
+    const output = `${fmt.format(start)} - ${fmt.format(end)}`;
+    // → 'May 7, 2o19 - May 9, 2019'
+
+    const output2 = fmt.formatRange(start, end);
+    // → 'May 7 - 9, 2019'
+
+    /**
+    * Intl.Local
+    **/
+    const locale = new Intl.Locale('es-419-u-hc-h12', {
+        calendar: 'gregory'
+    });
+    locale.language
+    // → 'es'
+    locale.region
+    // → '419'
+    locale.hourCycle
+    // → 'h12'
+    locale.calendar
+    // → 'gregory'
+    locale.toString();
+    // → 'es-419-u-ca-gregory-hc-h12'
 ```
-> <h3 styles="color:red">Note: the API has support in chrome, firefox, safari, nodejs.</h3>
+> <h3 styles="color:red">Note: the API has support in chrome, nodejs.</h3>
+
+> <h2>Promise</h2>
+
+```js
+    //Promise add two methods：Promise.allSettled() & Promise.any
+    const promises = [
+        fetch('/api-call-1'),
+        fetch('/api-call-2'),
+        fetch('/api-call-3')
+    ]
+
+    Promise.allSettled(promises);
+    //Promise.allSettled gives you a singal when all of the input promises are settled, and that means they're either fulfilled or rejected. This is uesful in those cases where you don't really care about the state of the promise-you just want to know when the work is done, regardless of whether it was successful.
+
+    //Promise.any() is not supported, but the other hand, Promise.allSetted() has supported in Chrome 76, FireFox Nightly. For other browsers, a polyfill is available. 
+```
