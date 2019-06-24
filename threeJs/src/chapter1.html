@@ -13,12 +13,37 @@
     }
 </style>
 <body>
-    <div id="root">
-
-    </div>
+    <div id="root"></div>
+    <div id="stats"></div>
     <script src="../lib/three.js"></script>
+    <script src="../lib/stats.js"></script>
+    <script src="../lib/dat.gui.js"></script>
     <script>
+        //init stats
+        function initStats() {
+            var stats = new Stats();
+            stats.setMode(0);
+            stats.domElement.style.position = 'absolute';
+            stats.domElement.style.left = '0px';
+            stats.domElement.style.top = '0px';
+            document.getElementById('stats').appendChild(stats.domElement);
+            return stats;
+        }
+        
         function init() {
+            //初始化统计数据
+            var stats = initStats();
+
+            //data.ui.js对象
+            var control = new function() {
+                this.rotationSpeed = 0.02;
+                this.bouncingSpeed = 0.03;
+            }
+
+            var gui = new dat.GUI();
+            gui.add(control, 'rotationSpeed', 0, 0.5);
+            gui.add(control, 'bouncingSpeed', 0, 0.5);
+
             //scene
             var scene = new THREE.Scene();
             //camera
@@ -83,9 +108,12 @@
             var step = 0;
 
             function animate() {
+                stats.update();
                 requestAnimationFrame(animate);
-                step += 0.04;
-                cube.rotation.x += 0.01;
+                step += control.bouncingSpeed;
+                cube.rotation.x += control.rotationSpeed;
+                cube.rotation.y += control.rotationSpeed;
+                cube.rotation.z += control.rotationSpeed;
                 sphere.position.x = 20 + 10*Math.cos(step);
                 sphere.position.y = 2 + (10*Math.abs(Math.sin(step)));
                 renderer.render(scene, camera);
