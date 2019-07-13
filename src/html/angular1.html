@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 通常情况下不适用ng-init,使用控制器或者模块来进行数据初始化 -->
+    <div ng-app="" ng-init="person={firstname: 'tian', lastname: 'tao'}">
+        <p>使用双括号绑定数据:{{person.firstname + ',' + person.lastname}}</p>
+        <p>使用ng-bind进行绑定<span ng-bind="person"></span></p>
+
+        <!-- ng-repeat重复元素（对照angular中的*ngFor） -->
+        <ul>
+            <!-- ng-repeat对照集合（数组）中的每个元素都会克隆一次 -->
+            <li ng-repeat="name in person" ng-bind="name">
+            </li>
+        </ul>
+
+        <!-- ng-model -->
+        <!--bind HTML element to application data -->
+        <!-- also, provide type validate for application data(such as number, email, required) -->
+        <!-- also, provide state for application data(such as dirty, touched, err, invalid) -->
+        <!-- also, provide CSS elements for application data -->
+        <!-- also, bind HTML element to HTML form -->
+        <label for="input">email</label>
+        <input type="text" id="input" ng-model="name">
+        <p>content you input is<span ng-bind='name'></span></p>
+    </div>
+    <script src="../../lib/angular.min.js"></script>
+</body>
+
+</html>

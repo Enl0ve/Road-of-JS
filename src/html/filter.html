@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter</title>
+</head>
+<body>
+    <div ng-app='myApp' ng-controller='myCtrl'>
+        <label for="filter">keyWord:</label>
+        <input type="text" id="filter" ng-model="test">
+
+        <ul>
+            <li ng-repeat='name in names | filter:test | orderBy:"age"'>{{name.age + ' ' + name.name + ' ' + name.sex}}</li>
+        </ul>
+    </div>
+    <script src="../../lib/angular.min.js"></script>
+    <script>
+        angular.module('myApp', [])
+            .controller('myCtrl', ($scope) => $scope.names = [
+                {name:'zhang', age:12, sex:'male'},
+                {name:'wang', age:13, sex:'female'},
+                {name:'li', age:12, sex:'male'},
+                {name:'chen', age:14, sex:'female'},
+                {name:'fu', age:11, sex:'male'},
+            ]);
+    </script>
+</body>
+</html>

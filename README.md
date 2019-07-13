@@ -1,12 +1,12 @@
-# Road-of-JS
+# stack-dog
 
-> ## Love progarm, Love life
+This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
+version 0.16.0.
 
-> ## 📕-《ES6经典函数是编程》
-### 第一本书《ES6经典函数式编程》基本已经看完了，剩下的内容会在近期补上。这本书前前后后读了将近半个月，对函数式编程的思想有了进一步的理解。
+## Build & development
 
-> ## 📕-《JS YOU DONT KNOW》
-### 第二本书正在计划中
+Run `grunt` for building and `grunt serve` for preview.
 
-> ## 📕-《ThreeJs开发指南》
-### 第二本书正式开始更新
+## Testing
+
+Running `grunt test` will run the unit tests with karma.

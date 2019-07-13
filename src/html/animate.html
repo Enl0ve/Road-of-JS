@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animate</title>
+
+    <script src="../../lib/angular.min.js"></script>
+    <script src="../../lib/angular-animate.min.js"></script>
+    <style>
+        /* css过渡 */
+        div {
+            transition: all linear 0.5s;
+            background-color: lightblue;
+            height: 100px;
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            }
+
+            .ng-hide {
+            width: 0;
+            /* background-color: transparent; */
+            }
+    </style>
+</head>
+<body ng-app='ngAnimate'>
+    <h1>隐藏 DIV: <input type="checkbox" ng-model="myCheck"></h1>
+
+    <div ng-hide="myCheck"></div>
+</body>
+</html>

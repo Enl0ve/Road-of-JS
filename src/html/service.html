@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Service</title>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <p>current URL:{{url | myFormat}}</p>
+    </div>
+
+    <script src="../../lib/angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp', [])
+
+        app.service('hexafy', function() {
+            this.myFunc = function (x){
+                return x.toString(16);
+            }
+        });
+
+        app.filter('myFormat', ['hexafy', function(hexafy) {
+            return function(x) {
+                return hexafy.myFunc(x);
+            };
+        }]);
+
+        app.controller('myCtrl', ($scope, $timeout) => {
+            $scope.url = 255;
+            $timeout(function(){
+                $scope.url = 456;
+            }, 2000)});
+    </script>
+</body>
+</html>

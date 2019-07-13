@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table</title>
+</head>
+<body>
+    <div ng-app='myApp' ng-controller='myCtrl'>
+        <!-- 使用ng-repeat可以完美地实现表格 -->
+        <table>
+            <th>
+                <tr>
+                    <td>{{thead}}</td>
+                </tr>
+            </th>
+            <tbody>
+                <tr ng-repeat="x in tbody | orderBy:'price'">
+                    <td>{{x.title}}</td>
+                    <td>{{x.price | currency}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="../../lib/angular.min.js"></script>
+    <script>
+        angular.module('myApp', [])
+                .controller('myCtrl', function($scope) {
+                    $scope.thead = 'Angular Table';
+                    $scope.tbody = [{
+                        title: 'deep into nodejs',
+                        price: 123
+                    }, {
+                        title: 'java programme',
+                        price: 234
+                    }, {
+                        title: 'angular learning',
+                        price: 90
+                    }]
+                });
+    </script>
+</body>
+</html>

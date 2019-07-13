@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scope</title>
+</head>
+<body>
+    <div ng-app="myApp" ng-Controller="myCtrl">
+        <span>carname:</span>
+        <input type="text" ng-model="carname">
+        <p>{{carname}}</p>
+    </div>
+</body>
+<!-- 加载angularjs -->
+<script src="../../lib/angular.min.js"></script>
+
+<script>
+    var myApp = angular.module('myApp', []);
+    // 参数$scope中的属性对应了视图上的属性
+    myApp.controller('myCtrl', ($scope) => $scope.carname = 'audi');
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Controller</title>
+</head>
+<body>
+    <div ng-app='myApp' ng-controller='myCtrl'>
+        <label for="fname">firstname</label>
+        <input type="text" id='fname' ng-model='firstname'>
+        <br>
+        <label for="lname">lastname</label>
+        <input type="text" id="lname" ng-model='lastname'>
+
+        <p>我的名字是:{{fullname()}}</p>
+    </div>
+    <script src="../../lib/angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', ($scope) => {
+            $scope.firstname = 'wang';
+            $scope.lastname = 'san';
+            $scope.fullname = () => $scope.firstname + ',' + $scope.lastname;
+        })
+    </script>
+</body>
+</html>

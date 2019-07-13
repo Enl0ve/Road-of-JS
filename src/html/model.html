@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0        ">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>model</title>
+</head>
+<body>
+    <div ng-app='myApp' personal-directive>
+
+    </div>
+    <script src="../../lib/angular.min.js"></script>
+    <script>
+        angular.module('myApp', [])
+            .directive('personalDirective', function () {
+                return {
+                    template: '我在指令构造器中创建'
+                }
+            })
+    </script>
+</body>
+</html>

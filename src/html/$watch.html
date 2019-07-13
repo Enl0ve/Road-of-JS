@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>$watch</title>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <input type="text" ng-model="username">
+        <div>
+            <span>firstname:{{firstname}}</span>
+            <span>lastname:{{lastname}}</span>
+        </div>
+    </div>
+</body>
+
+    <script src="../../lib/angular.min.js"></script>
+    <script>
+        angular.module('myApp', [])
+            .controller('myCtrl', function($scope) {
+                $scope.username = 'John wang';
+                $scope.firstname = 'John';
+                $scope.lastname = 'wang';
+
+                $scope.$watch('username', function(value) {
+                    var name = value.split(' ');
+                    $scope.firstname = name[0];
+                    $scope.lastname = name[1];
+                })
+            })
+    </script>
+</html>

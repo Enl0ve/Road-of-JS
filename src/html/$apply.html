@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>$apply</title>
+</head>
+<body>
+    <div ng-app='myApp' ng-controller='httpController'>
+        <div>{{result}}</div>
+        <button type="submit" ng-click=''>Click</button>
+    </div>
+
+    <script src="../../lib/angular.min.js"></script>
+    <script>
+        angular.module('myApp', [])
+            .controller('httpController', function($scope, $timeout){
+                $scope.result = 'waiting...';
+                
+                $scope.getdata = function() {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if(xmlhttp.readyState == 2 && xmlhttp.status == 200) {
+                            $scope.result = xmlhttp.responseText;
+                            $scope.$apply();
+                        }
+                    }
+                    xmlhttp.open('GET', './$apply.html');
+                    xmlhttp.send();
+                }
+
+                $timeout($scope.getdata, 2000)
+            })
+    </script>
+</body>
+</html>

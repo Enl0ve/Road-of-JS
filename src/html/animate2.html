@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animate</title>
+
+    <script src="../../lib/angular.min.js"></script>
+    <script src="../../lib/angular-animate.min.js"></script>
+    <style>
+        /* CSS动画 */
+        @keyframes myAnimation {
+            from {
+                height: 100px;
+            } to {
+                height: 0;
+            }
+        }
+
+        @keyframes myAnimationShow {
+            from {
+                height: 0;
+            } to {
+                height: 100px;
+            }
+        }
+        
+        div {
+            background-color: lightblue;
+            height: 100px;
+            }
+
+        .ng-hide {
+            animation: 0.5s myAnimation
+        }
+
+        .ng-show {
+            animation: 0.5s myAnimationShow
+        }
+    </style>
+</head>
+<body ng-app='ngAnimate'>
+    <h1>隐藏 DIV: <input type="checkbox" ng-model="myCheck"></h1>
+
+    <div ng-hide="myCheck"></div>
+</body>
+</html>

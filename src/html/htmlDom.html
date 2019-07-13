@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html dom</title>
+</head>
+<body>
+    <div ng-app='myApp' ng-controller='myCtrl'>
+        <button ng-disabled="isdisabled">{{isdisabeld?'点我':'不能点了'}}</button>
+    </div>
+    <script src="../../lib/angular.min.js"></script>
+    <script>
+        angular.module('myApp', [])
+                .controller('myCtrl', ($scope, $timeout) => {
+                    $scope.isdisabeld = false;
+                    $timeout(function() {
+                        $scope.isdisabeld = true;
+                    }, 2000);
+                });
+    </script>
+</body>
+</html>

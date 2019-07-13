@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>trap_ngBind</title>
+</head> 
+<body>
+    <div ng-app="myApp">
+        <span ng-bind="'click the http://www.baidu.com now' | linkify"></span>
+    </div>
+    <script src="../../../lib/angular.min.js"></script>
+    <script>
+        angular.module('myApp', [])
+            .filter('linkify', function() {
+                return function(string) {
+                    return string.replace(/(http:\/\/\S+)/ig, function(match) {
+                        return "<a href='" + match + ">" + match+ "</a>"
+                    });
+                };
+            });
+    </script>
+</body>
+</html>
